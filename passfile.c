@@ -3,13 +3,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "passfile.h"
 #include "./tinyfiledialogs/tinyfiledialogs.h"
+#include "passfile.h"
 #include "stb_image.h"
 
 #define len(x) (sizeof((x)) / sizeof(*(x)))
 
-const char *out[45];
+const char *internal_buffer[45];
 
 typedef struct File {
         unsigned char *data;
@@ -66,8 +66,8 @@ file_hash(File *file, void **digest, unsigned int *digest_size)
 static const char *
 b64(void *data, unsigned int size)
 {
-        out[EVP_EncodeBlock((unsigned char *) out, data, size)] = 0;
-        return (const char *) out;
+        internal_buffer[EVP_EncodeBlock((unsigned char *) internal_buffer, data, size)] = 0;
+        return (const char *) internal_buffer;
 }
 
 const char *
@@ -90,6 +90,8 @@ pf_get()
 
         return b64_digest_str;
 }
+
+#undef len
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
