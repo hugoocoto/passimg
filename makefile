@@ -1,8 +1,8 @@
-HEAD = ./tinyfiledialogs/tinyfiledialogs.h ./passfile.h 
-SRC = ./tinyfiledialogs/tinyfiledialogs.c ./test.c ./passfile.c
+HEAD = ./tinyfiledialogs/tinyfiledialogs.h ./passimg.h 
+SRC = ./tinyfiledialogs/tinyfiledialogs.c ./test.c ./passimg.c
 FLAGS = -Wall -Wextra
 INCL = -lcrypto -lm
 
-passfile: $(HEAD) $(SRC)
+passimg: $(HEAD) $(SRC)
 	gcc $(SRC) $(FLAGS) -o $@ $(INCL) 
 

@@ -4,7 +4,7 @@
 #include <string.h>
 
 #include "./tinyfiledialogs/tinyfiledialogs.h"
-#include "passfile.h"
+#include "passimg.h"
 #include "stb_image.h"
 
 #define len(x) (sizeof((x)) / sizeof(*(x)))

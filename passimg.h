@@ -3,6 +3,6 @@
 
 // open a dialog, select a file and return a zero terminated char array
 // (aka string) with the password associated with the image.
-const char *pf_get();
+const char *passimg();
 
-#endif // !PASSFILE_H_
+#endif // !PASSIMG_H_
