@@ -1,3 +1,7 @@
+#if _POSIX_C_SOURCE < 200809L
+#define _POSIX_C_SOURCE 200809L
+#endif
+
 #include <assert.h>
 #include <openssl/evp.h>
 #include <stdlib.h>
@@ -71,7 +75,7 @@ b64(void *data, unsigned int size)
 }
 
 const char *
-pf_get()
+passimg()
 {
         void *digest;
         unsigned int digest_size;
