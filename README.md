@@ -1,8 +1,8 @@
 # PassImg
 
-Library to ask for passwords. Instead of using an input box that hides what you
-are typing, this library opens an image picker and extracts the password from
-the selected image.
+Library for asking for passwords. Instead of using an input box that hides what
+you are typing, this library opens an image picker and extracts the password
+from the selected image.
 
 ## Example
 ```c
